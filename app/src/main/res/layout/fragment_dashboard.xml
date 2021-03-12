@@ -7,16 +7,71 @@
     tools:context=".ui.dashboard.DashboardFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/investingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Investing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/investing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/investingText"
+        app:layout_constraintTop_toBottomOf="@+id/investingText" />
+
+    <TextView
+        android:id="@+id/buyingPowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Buying Power"
+        app:layout_constraintStart_toStartOf="@+id/investing"
+        app:layout_constraintTop_toBottomOf="@+id/investing" />
+
+    <TextView
+        android:id="@+id/buyingPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buyingPowerText" />
+
+    <TextView
+        android:id="@+id/lists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lists"
+        app:layout_constraintStart_toStartOf="@+id/buyingPowerText"
+        app:layout_constraintTop_toBottomOf="@+id/buyingPowerText" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ic_menu_black_24"
+        app:layout_constraintBottom_toBottomOf="@+id/lists"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lists"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/lists" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
